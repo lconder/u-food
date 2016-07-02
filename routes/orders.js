@@ -42,20 +42,6 @@ router.post('/', function(req, res, next){
 		if(err)
 			res.send(err);
 
-		o = {
-
-		};
-		request({
-		    url: 'http://payu-siulpolb.rhcloud.com/api/',
-		    method: 'POST',
-		    form : o
-		  }, function(error, response, body){
-		    if(error) {
-		        console.log(error);
-		    } else {
-		        console.log(response.statusCode, body);
-		    }
-		  });
 		res.io.emit("socketToMe", {data: order});
 		res.send({});
 	});

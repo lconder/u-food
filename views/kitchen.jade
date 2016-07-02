@@ -1,0 +1,30 @@
+extends layout	
+
+block content
+	include bar	
+
+	.container
+		.row
+			.col-md-12
+				.panel.panel-default
+					.panel-heading
+						legend Historial
+					.panel-body
+						table#order.table.table-striped.table-hover
+							thead
+								tr.warning
+									th Nombre
+									th Descripción
+									th Precio
+							tbody
+								each val in payments
+									th=val.name
+									th=val.description
+									th=val.price
+
+						
+
+
+	include footer
+	
+	

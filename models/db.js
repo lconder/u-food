@@ -9,6 +9,14 @@ var Order = new Schema({
 	status: Number,
 });
 
+var Payment = new Schema({
+	name: String,	
+	description: String,	
+	price: Number,
+	status: Number,
+});
+
 mongoose.model('order', Order);
+mongoose.model('payment', Payment);
 //mongoose.connect('mongodb://lconder:novidosN0!@ds040489.mlab.com:40489/ufood');
 mongoose.connect('mongodb://localhost/ufood');
