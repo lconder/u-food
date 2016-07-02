@@ -1,0 +1,22 @@
+.navbar.navbar-inverse
+  .container-fluid
+    .navbar-header
+      button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-responsive-collapse')
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand(href='/') uFood
+    .navbar-collapse.collapse.navbar-responsive-collapse
+      ul.nav.navbar-nav
+        li.active
+          a(href='javascript:void(0)') Cajero
+        li.active
+          a(href='javascript:void(0)') Cocina
+      ul.nav.navbar-nav.navbar-right
+        li.dropdown
+          a.dropdown-toggle(href='bootstrap-elements.html', data-target='#', data-toggle='dropdown')
+            | Acerca de
+            b.caret
+          ul.dropdown-menu
+            li
+              a(href='#') Cerrar Sesión

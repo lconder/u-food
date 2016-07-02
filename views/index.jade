@@ -1,0 +1,34 @@
+extends layout
+
+block content
+	include bar
+	body(ng-app="formApp", ng-controller="MainCtrl")
+
+	.container
+		.row
+			.col-md-12
+				.panel.panel-default
+					.panel-heading
+						legend Pedidos
+					.panel-body
+						table#order.table.table-striped.table-hover
+							thead
+								tr.warning
+									th Nombre
+									th Descripción
+									th Precio
+									th Opciones
+							tbody
+								tr(ng-repeat='x in orders')
+									th {{x.name}}
+									th {{x.description}}
+									th {{x.price}}
+									th 
+										button.btn.btn-raised.btn-success(ng-click='deleteOrder(x._id)') Listo
+
+						
+
+
+	include footer
+	
+	
